@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Anxiety</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background-color: #000;
+        }
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        /* Hero Section with Wave */
+        .hero {
+            position: relative;
+            text-align: center;
+            background: linear-gradient(135deg, #111, #333);
+            color: #fff;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .hero-button {
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        .hero-button:hover {
+            background-color: #666;
+            transform: scale(1.1);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('https://www.svgrepo.com/show/300208/wave.svg') repeat-x;
+            background-size: cover;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 60px 20px;
+            background: #111;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Card Section */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background: #222;
+        }
+
+        .card {
+            background: #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            flex: 1 1 calc(33% - 40px);
+            max-width: calc(33% - 40px);
+            color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(100% - 40px);
+                max-width: calc(100% - 40px);
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div>
+            <h1>Understanding Anxiety</h1>
+            <p>Anxiety affects millions worldwide. Learn its causes, effects, and how to manage it effectively.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="content" id="content">
+            <h2>What is Anxiety?</h2>
+            <p>
+                Anxiety is a normal response to stress but can become overwhelming and disruptive. 
+                It's characterized by persistent feelings of worry or fear about everyday situations.
+            </p>
+        </section>
+
+        <section class="card-container">
+            <div class="card">
+                <h3>Causes</h3>
+                <p>
+                    Genetics, brain chemistry, trauma, and environmental factors can all contribute to anxiety disorders.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Symptoms</h3>
+                <p>
+                    Common symptoms include restlessness, rapid breathing, racing thoughts, and difficulty concentrating.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Management</h3>
+                <p>
+                    Techniques such as mindfulness, therapy, regular exercise, and medication can help manage anxiety effectively.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Moving the Needle in Mental Health. All rights reserved.</p>
+    </footer>
+</body>
+</html>

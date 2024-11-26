@@ -1,192 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>The Stigmas of Mental Health</title>
-    <meta name="description" content="Learn about the common stigmas related to mental health and ways to combat them.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving the Needle in Mental Health</title>
     <style>
-        /* Reset and Global Styles */
-        body, h1, p, div {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
+        /* Global Styles */
         body {
-            background-color: #333;
-            color: #333;
-            line-height: 1.6;
-            padding: 0 20px;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background-color: #000;
+            overflow-x: hidden;
         }
-        
-        /* Hero Section */
-        .Hero {
-            background: linear-gradient(135deg, #6a82fb, #fc5c7d);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .Hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        .Hero p {
-            font-size: 1.2em;
+
+        a {
+            text-decoration: none;
             color: #fff;
         }
 
-        /* Section Style */
-        section {
-            margin-top: 40px;
-            padding: 20px 0;
-        }
-        
-        .Common-Stigmas, .Common-Combats {
-            margin-bottom: 40px;
-        }
-        
-        h1 {
-            color: #ffffff;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #555;
+        h1, h2 {
+            margin: 0;
         }
 
-        .Stigma, .Combat {
-            background-color: #fff;
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #000, #333);
             padding: 20px;
-            border-radius: 8px;
-            margin: 10px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Common Combats and Stigmas Grid Layout */
-        .Common-Stigmas, .Common-Combats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
         }
 
-        /* Responsive Design for Mobile */
-        @media (max-width: 768px) {
-            .Common-Stigmas, .Common-Combats {
-                grid-template-columns: 1fr;
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            margin-top: 20px;
+        }
+
+        .hero-button {
+            background-color: #fff;
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .hero-button:hover {
+            transform: scale(1.1);
+            background-color: #666;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            background: linear-gradient(135deg, #444, #222);
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .dropdown-button:hover {
+            background: linear-gradient(135deg, #666, #333);
+            transform: scale(1.05);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            min-width: 200px;
+            z-index: 1;
+            overflow: hidden;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        /* About Section */
-        .About-Stigmas, .How-You-Can-Help {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
-            text-align: center;
-            color: #333;
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background 0.3s;
         }
-        
-        .About-Stigmas p, .How-You-Can-Help p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 20px;
+
+        .dropdown-content a:hover {
+            background-color: #333;
         }
-        
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         /* Footer */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
-            color: white;
-            margin-top: 40px;
+            background: #000;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="Hero">
+    <header class="hero">
         <div>
-            <h1>The Stigmas of Mental Health</h1>
-            <p>Common Stigmas and Ways to Combat Them</p>
-        </div>
-    </section>
-
-    <!-- Common Stigmas Section -->
-    <section>
-        <div class="Common-Stigmas">
-            <h1>Common Stigmas</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos rem exercitationem dicta quam est, fugiat consequuntur.</p>
-            <div class="Stigma 1">
-                <h3>Stigma 1</h3>
-                <p>Description of stigma 1.</p>
-            </div>
-            <div class="Stigma 2">
-                <h3>Stigma 2</h3>
-                <p>Description of stigma 2.</p>
-            </div>
-            <div class="Stigma 3">
-                <h3>Stigma 3</h3>
-                <p>Description of stigma 3.</p>
-            </div>
-            <div class="Stigma 4">
-                <h3>Stigma 4</h3>
-                <p>Description of stigma 4.</p>
+            <h1>Moving the Needle in Mental Health</h1>
+            <p>Empowering individuals to take charge of their mental well-being.</p>
+            <div class="hero-buttons">
+                <a href="Stigmas.html" class="hero-button">Stigmas</a>
+                <a href="Anxiety.html" class="hero-button">Anxiety</a>
+                <div class="dropdown">
+                    <button class="dropdown-button">More Topics</button>
+                    <div class="dropdown-content">
+                        <a href="depression.html">Depression</a>
+                        <a href="stress.html">Stress</a>
+                        <a href="self-care.html">Self-Care</a>
+                        <a href="resources.html">Resources</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Common Combats Section -->
-    <section>
-        <div class="Common-Combats">
-            <h1>Common Combats</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates omnis voluptatibus, iusto reprehenderit perferendis veniam.</p>
-            <div class="Combat 1">
-                <h3>Combat 1</h3>
-                <p>Description of combat 1.</p>
-            </div>
-            <div class="Combat 2">
-                <h3>Combat 2</h3>
-                <p>Description of combat 2.</p>
-            </div>
-            <div class="Combat 3">
-                <h3>Combat 3</h3>
-                <p>Description of combat 3.</p>
-            </div>
-            <div class="Combat 4">
-                <h3>Combat 4</h3>
-                <p>Description of combat 4.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Stigmas Section -->
-    <section>
-        <div class="About-Stigmas">
-            <h1>About Stigmas</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, perferendis suscipit reprehenderit dignissimos possimus corrupti laborum.</p>
-        </div>
-    </section>
-
-    <!-- How You Can Help Section -->
-    <section>
-        <div class="How-You-Can-Help">
-            <h1>How You Can Help!</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos et error, saepe recusandae accusantium sapiente veritatis.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Mental Health Awareness</p>
+        <p>© 2024 Moving the Needle in Mental Health. All rights reserved.</p>
+        <p>current views below</p><div align=center><a href='https://www.counter12.com'><img src='https://www.counter12.com/img-dWCb8983AcBb922W-26.gif' border='0' alt='estatisticas gratis'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=dWCb8983AcBb922W'></script></div>
     </footer>
 </body>
 </html>

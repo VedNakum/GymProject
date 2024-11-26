@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Mental Health Stigmas</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background-color: #000;
+            overflow-x: hidden;
+        }
+
+        h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: #000;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, #222, #444);
+            z-index: 1;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 50%;
+            margin-left: 5%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .hero-button {
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        .hero-button:hover {
+            background-color: #666;
+            transform: scale(1.05);
+        }
+
+        /* Split Content Sections */
+        .split {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
+            background: #111;
+        }
+
+        .split .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .split .content:nth-child(even) {
+            background: #222;
+        }
+
+        .split h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .split p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Breaking Mental Health Stigmas</h1>
+            <p>
+                Stigma affects individuals, communities, and access to mental health care.
+                It’s time to understand, confront, and eliminate it.
+            </p>
+            <a href="index.html" class="hero-button">Back Home</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="split">
+            <div class="content">
+                <h2>What is Stigma?</h2>
+                <p>
+                    Stigma is a negative stereotype that labels individuals with mental health challenges.
+                    It often results in discrimination and a reluctance to seek help.
+                </p>
+            </div>
+            <div class="content">
+                <h2>Why Does It Persist?</h2>
+                <p>
+                    Lack of awareness, fear, and cultural norms contribute to the persistence of mental health stigma.
+                    Breaking it starts with education and open dialogue.
+                </p>
+            </div>
+        </section>
+
+        <section class="split">
+            <div class="content">
+                <h2>How to Combat Stigma</h2>
+                <p>
+                    - Share your story.<br>
+                    - Educate yourself and others.<br>
+                    - Challenge stereotypes in everyday conversations.<br>
+                    - Advocate for inclusive mental health policies.
+                </p>
+            </div>
+            <div class="content">
+                <h2>The Impact of Breaking Stigma</h2>
+                <p>
+                    Reducing stigma can improve access to mental health care,
+                    foster acceptance, and empower individuals to live fulfilling lives.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Moving the Needle in Mental Health. All rights reserved.</p>
+    </footer>
+</body>
+</html>
